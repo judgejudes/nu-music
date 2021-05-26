@@ -2,18 +2,25 @@
 
 [Header
   fullWidth:true
-  title:"My Idyll Post"
-  subtitle:"Welcome to Idyll. Open index.idyll to start writing"
+  title:"Northwestern Students' Favorite Albums, Ranked"
   author:"Your Name Here"
-  authorLink:"https://idyll-lang.org"
   date:"May 25, 2021"
   background:"#222222"
   color:"#ffffff"
    /]
 
 [var name:"x" value:0 /]
-This is just a test hello!
+// This is just a test hello!
+// there will be 7 rows of butterflies
+// pass in 7 decades worth of data individually
+
+
 ## Introduction
+
+In early 2021, we asked ~200 Northwestern students about their music preferences. Let's see
+what we found...
+
+[Wings/]
 
 This is an Idyll post. It is generated via
 the file `index.idyll`. To compile this post using
