@@ -2,7 +2,8 @@ const albums = [
   {
     "decade": "1960",
     "title": "At Last",
-    "artist": "Etta James"
+    "artist": "Etta James",
+    "color": "#"
 
   },
   {
