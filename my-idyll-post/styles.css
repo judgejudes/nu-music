@@ -1,10 +1,19 @@
-.d3-component svg {
+/* .d3-component svg {
   background: #ddd;
   max-height: 300px;
+} */
+
+.petal {
+  width: 220px;
+  height: 200px;
 }
 
-@media all and (max-width: 1000px) {
+/* body {
+  overflow-x: hidden !important;
+} */
+
+/* @media all and (max-width: 1000px) {
   .d3-component svg {
     max-height: 200px;
   }
-}
+} */
