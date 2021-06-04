@@ -1,4 +1,4 @@
-[
+const albums = [
   {
     "": 357,
     "Artist": "Sufjan Stevens",
@@ -1748,3 +1748,5 @@
     "AOTY User Reviews": 1836
   }
 ]
+
+module.exports = albums;
