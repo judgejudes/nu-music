@@ -7,7 +7,9 @@
   width: 800px;
   height: 1000px;
 }
-
+*{
+  margin-left: 10px; 
+}
 /* body {
   overflow-x: hidden !important;
 } */
