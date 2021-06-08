@@ -70,8 +70,7 @@ const Wings = ({ }) => {
 
             var title = g.append('text')
             title.attr('text-anchor', 'middle')
-                .attr('dy', '.25em')
-                //.attr('transform',`translate(100,100)`)
+                .attr('dy', '4.05em')
                 .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`)
 
                 .style('font-size', '.8em')
@@ -80,13 +79,14 @@ const Wings = ({ }) => {
             
             var artist = g.append('text')
             artist.attr('text-anchor', 'middle')
-                .attr('dy', '2.5em')
-                //.attr('transform',`translate(100,100)`)
+                .attr('dy', '6.5em')
                 .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`)
 
                 .style('font-size', '.6em')
-                .style('font-style', 'bold')
+                .style('font-style', 'italic')
                 .text(d => _.truncate(d.Artist, {length: 20}))
+
+
             
 
             // bind d3 data
@@ -104,20 +104,10 @@ const Wings = ({ }) => {
                 //.attr('d',wingType)
 
                 .attr('d', function (d) {
+                    // retrieve AOTY Critic and User Score of each album 
                     var AOTYScore = d['AOTY Critic Score'];
                     var AOTYUserScore = d['AOTY User Score'];
-                    console.log("AOTYScore",AOTYScore)
-                    console.log("AOTYUserScore",AOTYUserScore)
 
-                    // max aoty reviews: 42
-                    //var AOTYReviews =  (d) => d['AOTY Critic Reviews'];
-                    var numPetalScale = d3.scaleQuantize().domain(d['AOTY Critic Score']).range([2, 4, 6, 8, 10, 12])
-                    var sizeScale = d3.scaleQuantize().domain(d['AOTY Critic Reviews']).range([.1, .2, .3, .4, .5, .6, .7, .8, .9, 1])
-            
-                    var numPetals = numPetalScale(AOTYScore);
-                    var petalSize = 50
-                    
-                    console.log("numPetals",numPetals);
                     //var petSize = sizeScale(AOTYReviews);
                     //console.log("petSize",petSize);
             
@@ -141,6 +131,7 @@ const Wings = ({ }) => {
                     if (AOTYScore >= 90 && AOTYScore < 100){
                       wingType = wing6_top
                     };
+
                     // set lower wing types depending on AOTY User Score
                     if (AOTYUserScore < 50 || AOTYUserScore == ""){
                         wingType += wing1_bottom;
@@ -153,6 +144,7 @@ const Wings = ({ }) => {
                     };
                     if (AOTYUserScore >= 70 && AOTYUserScore < 80){
                         wingType += wing4_bottom;
+
                     };
                     if (AOTYUserScore >= 80 && AOTYUserScore < 90){
                         wingType = wingType.concat(wing5_bottom);
@@ -163,7 +155,6 @@ const Wings = ({ }) => {
                     console.log(wingType)
                     return(wingType);
                 })
-//                .attr('transform', d => `translate(${petalSize}, ${petalSize})scale(${d.petSize})`)
                 .attr('transform', d => `scale(.6)`)
 /*
                 .attr('transform', function (d) {
@@ -197,7 +188,27 @@ const Wings = ({ }) => {
                     //return `scale(wingSize)`
                 })
                 */
-                .attr('stroke', 'purple')
+                //.attr('stroke', 'purple')
+
+                .attr('stroke', function (d) {
+                    var RDay = d['Release Month'];
+                    // set outline color based on season
+                    var outlineColor = '#1f29ed';
+                    if (RDay == "December"|| RDay == "January"|| RDay == "February"){
+                        outlineColor = "#1f29ed"
+                    };
+                    if (RDay == "March"|| RDay == "April"|| RDay == "May"){
+                        outlineColor = "#fb8aff"
+                    };
+                    if (RDay == "June"|| RDay == "July"|| RDay == "August"){
+                        outlineColor = "#ffef8a"
+                    };
+                    if (RDay == "September"|| RDay == "October"|| RDay == "November"){
+                        outlineColor = "#f09f48"
+                    };
+                    return(outlineColor);
+                })
+
                 .attr('stroke-width', '1.8')
                 // .attr('fill', 'none')
                 // .attr("x", (d) => d[1] * 20)
@@ -213,12 +224,25 @@ const Wings = ({ }) => {
                 console.log("genre colors",(d)=>albums[d].Title)
 
                 //.call(log, "what")
-            
-            
+            //var antennas = g.append('path')
+            //antennas.attr('d', 'M0,0 C7,15 5,17 -1,25')
+            //    .attr('fill', 'none')
+            //    .attr('stroke', 'black')
+
+
+
             update
                 .attr('x', (_, i) => i * 220)
                 //.text((d) => d);
 
+            update.enter()
+                .append('path')
+                .attr('d', "M0,0 C7,15 5,17 -1,25")
+                .attr("fill", 'none')
+                .attr('stroke-width', '1.8')
+                .attr('stroke', 'black')
+            
+                
             function log(sel, msg) {
                 console.log(msg, sel)
             }
