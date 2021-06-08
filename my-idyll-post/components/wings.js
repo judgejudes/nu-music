@@ -24,6 +24,14 @@ const Wings = ({ }) => {
         Other: "#fff2b4"
     }
 
+    let perRow = 10
+    const pathWidth = 120
+    perRow = Math.floor(1400/pathWidth)
+
+    let calculateGridPos = (i) => {
+        return [(i % perRow + 0.5) * pathWidth, (Math.floor(i / perRow) + 0.5) * pathWidth]
+      }
+
     // to execute d3
     useEffect(() => {
 
@@ -48,13 +56,20 @@ const Wings = ({ }) => {
                 // ITS THE TRANSLATION OMG
                 // .attr('transform', (d, i) => 'translate(' + ((i * 150)) + ',0)')
 
-                .attr('transform', function (d, i) {
-                    if (i == 0) { return 'translate(50, 0)' }
-                    // change if statement later
-                    else { return 'translate(' + ((i * 150)) + ',0)' }
+                .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`
+                // function (d, i) {
+                    // if ()
+                    // if (i == 0) { return 'translate(50, 0)' }
+                    // if (i%9)
 
-                    ;
-                })
+                    // change if statement later
+                    // else { 
+                        // return 'translate(' + ((i * 150 + 50)) + ',0)' 
+                    // }
+
+                    // ;
+                // }
+                )
 
 
                 // .attr('class', 'petal')
