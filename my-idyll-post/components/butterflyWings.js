@@ -70,7 +70,7 @@ const Wings = ({ }) => {
 
             var title = g.append('text')
             title.attr('text-anchor', 'middle')
-                .attr('dy', '4.05em')
+                .attr('dy', '4.4em')
                 .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`)
 
                 .style('font-size', '.8em')
@@ -79,7 +79,7 @@ const Wings = ({ }) => {
             
             var artist = g.append('text')
             artist.attr('text-anchor', 'middle')
-                .attr('dy', '6.5em')
+                .attr('dy', '7.3em')
                 .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`)
 
                 .style('font-size', '.6em')
