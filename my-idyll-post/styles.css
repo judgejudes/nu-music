@@ -7,9 +7,40 @@
   width: 800px;
   height: 1000px;
 }
+/*
 *{
   margin-left: 10px; 
 }
+*/
+.article-header{
+  margin-left: 0px; 
+}
+
+.idyll-root :not(.article-header){
+  margin-left: 20px; 
+}
+
+.petalKey{
+  height: 100px;
+  width: 100%; 
+}
+
+.petal{
+  width: 100%; 
+  height: 2000px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: lightblue;
+}
+
+.idyll-text-container{
+  background-color: lightgrey;
+  border-spacing: 15px;
+  width: 100%;
+  height: 2000;
+
+}
+
 /* body {
   overflow-x: hidden !important;
 } */

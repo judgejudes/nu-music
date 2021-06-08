@@ -94,7 +94,7 @@ const Wings = ({ }) => {
         // </svg>
 
         <svg
-            className="petal"
+            className="petalKey"
             // width={400}
             // height={200}
             ref={d3Container}

@@ -10,11 +10,6 @@
   color:"#4E2A84"
    /]
 
-[var name:"x" value:0 /]
-// This is just a test hello!
-// there will be 7 rows of butterflies
-// pass in 7 decades worth of data individually
-
 
 ## Introduction
 [fullWidth]
@@ -30,6 +25,13 @@ what we found...
 [Wings/]
 
 [/fullWidth]
-
 [br /]
 [hr /]
+
+## Next:
+[fullWidth]
+[butterflyWings/]
+[/fullWidth]
+
+
+
