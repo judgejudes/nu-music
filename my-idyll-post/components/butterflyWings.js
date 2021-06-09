@@ -144,7 +144,6 @@ const Wings = ({ }) => {
                     };
                     if (AOTYUserScore >= 70 && AOTYUserScore < 80){
                         wingType += wing4_bottom;
-
                     };
                     if (AOTYUserScore >= 80 && AOTYUserScore < 90){
                         wingType = wingType.concat(wing5_bottom);
@@ -155,7 +154,9 @@ const Wings = ({ }) => {
                     console.log(wingType)
                     return(wingType);
                 })
-                .attr('transform', d => `scale(.6)`)
+                .attr('transform',`scale(2)`)
+
+                //.attr('transform', "scale(4,1)")
 /*
                 .attr('transform', function (d) {
                     // max aoty reviews: 42
@@ -234,10 +235,24 @@ const Wings = ({ }) => {
             update
                 .attr('x', (_, i) => i * 220)
                 //.text((d) => d);
-
+            
+            // add body
             update.enter()
                 .append('path')
-                .attr('d', "M0,0 C7,15 5,17 -1,25")
+                //.attr('d', "M0,0 C7,15 5,17 -1,25")
+                .attr('d', 'M0,0 a 2,5 0 1,1 1,0 a 2,5 0 1,1 -1,0')
+                .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`)
+                .attr("fill", 'black')
+                .attr('stroke-width', '1.8')
+                .attr('stroke', 'black')    
+
+            // add antennas
+            update.enter()
+                .append('path')
+                //.attr('d', "M0,0 C7,15 5,17 -1,25")
+                .attr('d', " M0,-2 L4,-25 M0,-2 L-4,-25")
+                .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`)
+
                 .attr("fill", 'none')
                 .attr('stroke-width', '1.8')
                 .attr('stroke', 'black')
