@@ -1783,6 +1783,24 @@ const albums = [
     "AOTY User Score": 71,
     "AOTY User Reviews": 637
   },
+  {
+    "Artist": "88rising",
+    "Title": "Head in the Clouds",
+    "Release Month": "July",
+    "Release Day": 20,
+    "Release Year": 2018,
+    "Format": "LP",
+    "Label": "SM Entertainment",
+    "Genre": "K-pop",
+    "Metacritic Critic Score": "",
+    "Metacritic Reviews": "",
+    "Metacritic User Score": "",
+    "Metacritic User Reviews": "",
+    "AOTY Critic Score": 68,
+    "AOTY Critic Reviews": 6,
+    "AOTY User Score": 55,
+    "AOTY User Reviews": 205
+  },
 ]
 
 module.exports = albums;
