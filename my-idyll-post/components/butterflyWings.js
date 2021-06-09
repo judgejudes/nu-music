@@ -29,7 +29,7 @@ const Wings = ({ }) => {
     perRow = Math.floor(800/pathWidth)
 
     let calculateGridPos = (i) => {
-        return [(i % perRow + 0.5) * pathWidth, (Math.floor(i / perRow) + 0.5) * pathWidth * 1.5]
+        return [(i % perRow + 0.5) * pathWidth * 1.8, (Math.floor(i / perRow) + 0.5) * pathWidth * 1.5]
       }
     
     // all wing shapes
