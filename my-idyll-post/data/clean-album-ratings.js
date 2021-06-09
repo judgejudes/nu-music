@@ -1746,7 +1746,43 @@ const albums = [
     "AOTY Critic Reviews": 33,
     "AOTY User Score": 77,
     "AOTY User Reviews": 1836
-  }
+  },
+  {
+    "Artist": "Kelly Clarkson",
+    "Title": "Thankful",
+    "Release Month": "April",
+    "Release Day": 15,
+    "Release Year": 2003,
+    "Format": "LP",
+    "Label": "RCA",
+    "Genre": "Pop",
+    "Metacritic Critic Score": 62,
+    "Metacritic Reviews": 7,
+    "Metacritic User Score": 5.2,
+    "Metacritic User Reviews": 104,
+    "AOTY Critic Score": 67,
+    "AOTY Critic Reviews": 5,
+    "AOTY User Score": 63,
+    "AOTY User Reviews": 41
+  },
+  {
+    "Artist": "Ariana Grande",
+    "Title": "Yours Truly",
+    "Release Month": "August",
+    "Release Day": 30,
+    "Release Year": 2013,
+    "Format": "LP",
+    "Label": "Republic",
+    "Genre": "R&B",
+    "Metacritic Critic Score": 81,
+    "Metacritic Reviews": 9,
+    "Metacritic User Score": 8.1,
+    "Metacritic User Reviews": 1050,
+    "AOTY Critic Score": 81,
+    "AOTY Critic Reviews": 5,
+    "AOTY User Score": 71,
+    "AOTY User Reviews": 637
+  },
 ]
 
 module.exports = albums;
