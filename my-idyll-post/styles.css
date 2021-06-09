@@ -5,7 +5,7 @@
 
 .petal {
   width: 1400px;
-  height: 1000px;
+  height: 2000px;
 }
 /*
 *{
@@ -20,11 +20,12 @@
   margin-left: 20px; 
 }
 
-.petalKey{
-  height: 100px;
+.Key{
+  height: 200px;
   width: 100%; 
 }
 
+/*
 .petal{
   width: 100%; 
   height: 2000px;
@@ -32,7 +33,13 @@
   margin-right: 20px;
   background-color: lightblue;
 }
+*/
 
+.petal{
+  margin-left: 0px;
+  padding-left: 0px;
+  background-color: lightblue;
+}
 
 .idyll-text-container{
   border-spacing: 15px;
@@ -40,6 +47,7 @@
   height: 2000;
 
 }
+
 
 /* body {
   overflow-x: hidden !important;

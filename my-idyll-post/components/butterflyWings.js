@@ -24,9 +24,9 @@ const Wings = ({ }) => {
         Other: "#fff2b4"
     }
 
-    let perRow = 10
+    let perRow = 5
     const pathWidth = 120
-    perRow = Math.floor(1400/pathWidth)
+    perRow = Math.floor(800/pathWidth)
 
     let calculateGridPos = (i) => {
         return [(i % perRow + 0.5) * pathWidth, (Math.floor(i / perRow) + 0.5) * pathWidth]
@@ -61,7 +61,6 @@ const Wings = ({ }) => {
 
         if (albums && d3Container.current) {
             const svg = d3.select(d3Container.current);
-            console.log("alv", albums)
             const flower = 100
             console.log(flower)
 
@@ -92,7 +91,7 @@ const Wings = ({ }) => {
                 .selectAll('path')
                 .data(albums)
 
-            // enter new D3 elements, UPPER WINGS --> AOTY SCORES
+            // enter new D3 elements, UPPER WINGS --> AOTY CRITIC SCORES
             update.enter()
                 .append('path')
                 .attr('viewBox', '0 0 200 297')
@@ -100,26 +99,26 @@ const Wings = ({ }) => {
 
                 .attr('d', function (d) {
                     // retrieve AOTY Critic and User Score of each album 
-                    var AOTYScore = d['AOTY Critic Score'];
+                    var AOTYCriticScore = d['AOTY Critic Score'];
             
                     // set upper wing type depending on AOTY scores
                     var wingType = wing1_top;
-                    if (AOTYScore < 50 || AOTYScore == ""){
+                    if (AOTYCriticScore < 50 || AOTYCriticScore == ""){
                       wingType = wing1_top
                     };
-                    if (AOTYScore >= 50 && AOTYScore < 60){
+                    if (AOTYCriticScore >= 50 && AOTYCriticScore < 60){
                       wingType = wing2_top
                     };
-                    if (AOTYScore >= 60 && AOTYScore < 70){
+                    if (AOTYCriticScore >= 60 && AOTYCriticScore < 70){
                       wingType = wing3_top
                     };
-                    if (AOTYScore >= 70 && AOTYScore < 80){
+                    if (AOTYCriticScore >= 70 && AOTYCriticScore < 80){
                       wingType = wing4_top
                     };
-                    if (AOTYScore >= 80 && AOTYScore < 90){
+                    if (AOTYCriticScore >= 80 && AOTYCriticScore < 90){
                       wingType = wing5_top
                     };
-                    if (AOTYScore >= 90 && AOTYScore < 100){
+                    if (AOTYCriticScore >= 90 && AOTYCriticScore < 100){
                       wingType = wing6_top
                     };
                     console.log(wingType)
@@ -153,32 +152,6 @@ const Wings = ({ }) => {
 
                 .attr('stroke-width', '1.8')
                 .attr('x', (d, i) => i * 220)
-                .attr('transform', function(d, i){
-                    var AOTYReviews = d['AOTY Critic Reviews'];
-                    console.log("AOTYReviews",AOTYReviews)
-                    var wingSize = .3
-                    // set upper wing scale depending on AOTY Reviews
-                    if (AOTYReviews < 10){
-                        wingSize = .3
-                    };
-                    if (AOTYReviews >= 10 && AOTYReviews < 20){
-                        wingSize = .4
-                    };
-                    if (AOTYReviews >= 20 && AOTYReviews < 30){
-                        wingSize = .5
-                    };
-                    if (AOTYReviews >= 30 && AOTYReviews < 40){
-                        wingSize = .6
-                    };
-                    if (AOTYReviews >= 40 && AOTYReviews < 50){
-                        wingSize = .8
-                    };
-                    if (AOTYReviews >= 50){
-                        wingSize = 1
-                    };
-                console.log("wingSize", wingSize)
-                    return `translate(${calculateGridPos(i)})scale(${wingSize})`;
-                })
                 .attr("fill", (d) => colors[d.Genre])
 
                 .attr("fill-opacity", '.6')
