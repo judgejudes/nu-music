@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as d3 from "d3";
 import albums from '../data/clean-album-ratings';
+import wingColors from '../data/wing-colors';
 import _ from 'lodash';
 
 
@@ -14,15 +15,6 @@ const Wings = ({ }) => {
 
     // ref is "get" and "set" via .current property
     const d3Container = useRef(null);
-
-    const colors = {
-        "Chamber Pop": "pink",
-        "Hip Hop": "blue",
-        "Neo-Psychedelia": "red",
-        Electronic: "purple",
-        "Indie Rock": "green",
-        Other: "#fff2b4"
-    }
 
     let perRow = 5
     const pathWidth = 150
@@ -152,7 +144,7 @@ const Wings = ({ }) => {
 
                 .attr('stroke-width', '1.8')
                 .attr('x', (d, i) => i * 220)
-                .attr("fill", (d) => colors[d.Genre])
+                .attr("fill", (d) => wingColors[d.Genre])
 
                 .attr("fill-opacity", '.6')
                 //console.log("genre colors",(d)=>albums[d].Title)
@@ -218,7 +210,7 @@ const Wings = ({ }) => {
                     return `translate(${calculateGridPos(i)})scale(${sizeScale(AOTYUserReviews)})`;
                 })
                 .attr("fill-opacity", '.6')
-                .attr("fill", (d) => colors[d.Genre])
+                .attr("fill", (d) => wingColors[d.Genre])
 
             // add scaled butterfly body
             update.enter()

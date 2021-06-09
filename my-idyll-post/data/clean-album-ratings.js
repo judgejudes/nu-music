@@ -1199,7 +1199,7 @@ const albums = [
   {
     "": 23516,
     "Artist": "Denzel Curry",
-    "Title": "Ta13Oo",
+    "Title": "Ta13oo",
     "Release Month": "July",
     "Release Day": 27,
     "Release Year": 2018,
