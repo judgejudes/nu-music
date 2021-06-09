@@ -69,19 +69,19 @@ const Wings = ({ }) => {
 
             var title = g.append('text')
             title.attr('text-anchor', 'middle')
-                .attr('dy', '4.4em')
+                .attr('dy', '5.5em')
                 .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`)
 
-                .style('font-size', '.8em')
+                .style('font-size', '.95em')
                 .style('font-style', 'bold')
                 .text(d => _.truncate(d.Title, {length: 20}))
             
             var artist = g.append('text')
             artist.attr('text-anchor', 'middle')
-                .attr('dy', '7.3em')
+                .attr('dy', '8.2em')
                 .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`)
 
-                .style('font-size', '.6em')
+                .style('font-size', '.75em')
                 .style('font-style', 'italic')
                 .text(d => _.truncate(d.Artist, {length: 20}))
 
@@ -127,7 +127,7 @@ const Wings = ({ }) => {
                 // scale lower wing size according to AOTY Critic Reviews (max = 46)
                 .attr('transform', function(d, i){
                     var AOTYCriticReviews = d['AOTY Critic Reviews'];
-                    var sizeScale = d3.scaleLinear().domain([0,46]).range([0.35, 1]);
+                    var sizeScale = d3.scaleLinear().domain([0,46]).range([0.7, 2]);
                     return `translate(${calculateGridPos(i)})scale(${sizeScale(AOTYCriticReviews)})`;
                 })
 
@@ -214,7 +214,7 @@ const Wings = ({ }) => {
                 // scale lower wing size according to AOTY User Reviews (max = 4530)
                 .attr('transform', function(d, i){
                     var AOTYUserReviews = d['AOTY User Reviews'];
-                    var sizeScale = d3.scaleLinear().domain([0,4530]).range([0.35, 1]);
+                    var sizeScale = d3.scaleLinear().domain([0,4530]).range([0.7, 2]);
                     return `translate(${calculateGridPos(i)})scale(${sizeScale(AOTYUserReviews)})`;
                 })
                 .attr("fill-opacity", '.6')
@@ -227,9 +227,9 @@ const Wings = ({ }) => {
                 .attr('d', 'M0,0 a 2,5 0 1,1 1,0 a 2,5 0 1,1 -1,0')
                 .attr('transform', function(d, i){
                     var AOTYCriticReviews = d['AOTY Critic Reviews'];
-                    var CRsizeScale = d3.scaleLinear().domain([0,46]).range([0.35, 1]);   
+                    var CRsizeScale = d3.scaleLinear().domain([0,46]).range([0.7, 2]);   
                     var AOTYUserReviews = d['AOTY User Reviews'];
-                    var URsizeScale = d3.scaleLinear().domain([0,4530]).range([0.35, 1]);                   
+                    var URsizeScale = d3.scaleLinear().domain([0,4530]).range([0.7, 2]);                   
                     var max = Math.max(CRsizeScale(AOTYCriticReviews), URsizeScale(AOTYUserReviews))
                     return `translate(${calculateGridPos(i)})scale(${max})`;
                 })
@@ -244,9 +244,9 @@ const Wings = ({ }) => {
                 .attr('d', " M0,-2 L4,-25 M0,-2 L-4,-25")
                 .attr('transform', function(d, i){
                     var AOTYCriticReviews = d['AOTY Critic Reviews'];
-                    var CRsizeScale = d3.scaleLinear().domain([0,46]).range([0.35, 1]); 
+                    var CRsizeScale = d3.scaleLinear().domain([0,46]).range([0.7, 2]); 
                     var AOTYUserReviews = d['AOTY User Reviews'];
-                    var URsizeScale = d3.scaleLinear().domain([0,4530]).range([0.35, 1]);                    
+                    var URsizeScale = d3.scaleLinear().domain([0,4530]).range([0.7, 2]);                    
                     var max = Math.max(CRsizeScale(AOTYCriticReviews), URsizeScale(AOTYUserReviews))
                     return `translate(${calculateGridPos(i)})scale(${max})`;
                 })
