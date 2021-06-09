@@ -25,7 +25,7 @@ const Wings = ({ }) => {
     }
 
     let perRow = 5
-    const pathWidth = 120
+    const pathWidth = 150
     perRow = Math.floor(800/pathWidth)
 
     let calculateGridPos = (i) => {

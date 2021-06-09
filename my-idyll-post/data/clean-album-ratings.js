@@ -1236,8 +1236,8 @@ const albums = [
   },
   {
     "": 23807,
-    "Artist": "Her'S",
-    "Title": "Invitation To Her'S",
+    "Artist": "Her's",
+    "Title": "Invitation to Her's",
     "Release Month": "August",
     "Release Day": 24,
     "Release Year": 2018,
@@ -1408,7 +1408,7 @@ const albums = [
   {
     "": 25587,
     "Artist": "The Lumineers",
-    "Title": "Iii",
+    "Title": "III",
     "Release Month": "September",
     "Release Day": 13,
     "Release Year": 2019,

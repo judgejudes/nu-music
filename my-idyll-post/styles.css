@@ -4,8 +4,9 @@
 } */
 
 .petal {
-  width: 1400px;
-  height: 2000px;
+  width: 1412px;
+  height: 2900px;
+  margin-left: 200px;
 }
 /*
 *{
@@ -16,9 +17,9 @@
   margin-left: 0px; 
 }
 
-.idyll-root :not(.article-header){
+/* .idyll-root :not(.article-header){
   margin-left: 20px; 
-}
+} */
 
 .Key{
   height: 200px;

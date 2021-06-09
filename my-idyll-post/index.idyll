@@ -1,9 +1,9 @@
-[meta title:"My Idyll Post" description:"Short description of your project" /]
+[meta title:"Album Butterflies" description:"Short description of your project" /]
 
 [Header
   className:'header'
   fullWidth:true
-  title:"Northwestern Students' Favorite Albums, Ranked"
+  title:"Album Butterflies"
   author:"Judy Lee & Esther Whang"
   date:"May 25, 2021"
   background:"#f4baff"
@@ -21,7 +21,7 @@ what we found...
 ## Key:
 ### Wing Shapes
 [fullWidth]
-[Key/]
+// [Key/]
 [/fullWidth]
 
 // [fullWidth]
