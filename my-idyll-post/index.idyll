@@ -19,11 +19,19 @@
 // [/fullWidth]
 [br /]
 
-// ## Key:
+## ✨Wing Colors✨
 [fullWidth]
 [ColorsKey /]
 [/fullWidth]
 
+// [br /]
+## ✨Wing Outline Colors: Season of Release✨
+[fullWidth]
+[OutlineKey /]
+[/fullWidth]
+
+[br /]
+## ✨Wings✨
 [fullWidth]
 [WingShapesKey/]
 [/fullWidth]
