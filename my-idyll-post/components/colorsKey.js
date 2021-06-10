@@ -163,6 +163,15 @@ const ColorsKey = ({ }) => {
                 float: 'left',
                 padding:'20px'
             }}>
+                <div className="circles" style={{ height: "40px", width: "40px", borderRadius: "50%", backgroundColor: "#C29979"}}></div>
+                <span>Indie</span>
+            </div>
+            <div style={{
+                textAlign: 'center',
+                display: 'block',
+                float: 'left',
+                padding:'20px'
+            }}>
                 <div className="circles" style={{ height: "40px", width: "40px", borderRadius: "50%", backgroundColor: "white", border: '1px solid black' }}></div>
                 <span>Other</span>
             </div>

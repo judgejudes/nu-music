@@ -1,4 +1,4 @@
-const upperWing = [
+const wingSizes = [
     {
         "": 20275,
         "Artist": "Imagine Dragons",
@@ -13,9 +13,9 @@ const upperWing = [
         "Metacritic Reviews": 7,
         "Metacritic User Score": 6.9,
         "Metacritic User Reviews": 422,
-        "AOTY Critic Score": 49,
+        "AOTY Critic Score": 88,
         "AOTY Critic Reviews": 21,
-        "AOTY User Score": 42,
+        "AOTY User Score": 88,
         "AOTY User Reviews": 554
       },
       {
@@ -32,9 +32,9 @@ const upperWing = [
         "Metacritic Reviews": "",
         "Metacritic User Score": "",
         "Metacritic User Reviews": "",
-        "AOTY Critic Score": 50,
+        "AOTY Critic Score": 88,
         "AOTY Critic Reviews": 21,
-        "AOTY User Score": 65,
+        "AOTY User Score": 88,
         "AOTY User Reviews": 168
       },
       {
@@ -51,9 +51,9 @@ const upperWing = [
         "Metacritic Reviews": 37,
         "Metacritic User Score": 8.4,
         "Metacritic User Reviews": 1802,
-        "AOTY Critic Score": 62,
+        "AOTY Critic Score": 88,
         "AOTY Critic Reviews": 21,
-        "AOTY User Score": 74,
+        "AOTY User Score": 88,
         "AOTY User Reviews": 1337
       },
       {
@@ -70,9 +70,9 @@ const upperWing = [
         "Metacritic Reviews": 23,
         "Metacritic User Score": 7.1,
         "Metacritic User Reviews": 216,
-        "AOTY Critic Score": 72,
+        "AOTY Critic Score": 88,
         "AOTY Critic Reviews": 21,
-        "AOTY User Score": 72,
+        "AOTY User Score": 88,
         "AOTY User Reviews": 228
       },
       {
@@ -89,35 +89,13 @@ const upperWing = [
         "Metacritic Reviews": 31,
         "Metacritic User Score": 8.4,
         "Metacritic User Reviews": 1098,
-        "AOTY Critic Score": 83,
+        "AOTY Critic Score": 88,
         "AOTY Critic Reviews": 21,
         "AOTY User Score": 88,
         "AOTY User Reviews": 2370
       },
-    {
-        "": 357,
-        "Artist": "Sufjan Stevens",
-        "Title": "≤ 100/100",
-        "Release Month": "July",
-        "Release Day": 5,
-        "Release Year": 2005,
-        "Format": "LP",
-        "Label": "Asthmatic Kitty",
-        "Genre": "Chamber Pop",
-        "Metacritic Critic Score": 90,
-        "Metacritic Reviews": 40,
-        "Metacritic User Score": 8.9,
-        "Metacritic User Reviews": 753,
-        "AOTY Critic Score": 92,
-        "AOTY Critic Reviews": 21,
-        "AOTY User Score": 91,
-        "AOTY User Reviews": 1409
-      },
-
-
-      
-
+  
 
 ]
 
-module.exports = upperWing;
+module.exports = wingSizes;

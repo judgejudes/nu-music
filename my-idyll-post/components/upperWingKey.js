@@ -59,21 +59,14 @@ const UpperWingKey = ({ }) => {
 
             var title = g.append('text')
             title.attr('text-anchor', 'middle')
-                .attr('dy', '5.5em')
+                .attr('dy', '4em')
                 .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`)
 
                 .style('font-size', '.95em')
                 .style('font-style', 'bold')
                 .text(d => _.truncate(d.Title, {length: 20}))
             
-            var artist = g.append('text')
-            artist.attr('text-anchor', 'middle')
-                .attr('dy', '8.2em')
-                .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`)
 
-                .style('font-size', '.75em')
-                .style('font-style', 'italic')
-                .text(d => _.truncate(d.Artist, {length: 20}))
 
             // bind d3 data
             var update = svg

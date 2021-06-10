@@ -1,4 +1,4 @@
-const upperWing = [
+const lowerWing = [
     {
         "": 20275,
         "Artist": "Imagine Dragons",
@@ -16,12 +16,32 @@ const upperWing = [
         "AOTY Critic Score": 49,
         "AOTY Critic Reviews": 21,
         "AOTY User Score": 42,
-        "AOTY User Reviews": 554
+        "AOTY User Reviews": 2100
+      },
+      
+      {
+        "": 1123,
+        "Artist": "Fall Out Boy",
+        "Title": "< 60/100",
+        "Release Month": "February",
+        "Release Day": 6,
+        "Release Year": 2007,
+        "Format": "LP",
+        "Label": "Island",
+        "Genre": "Pop Punk",
+        "Metacritic Critic Score": 75,
+        "Metacritic Reviews": 23,
+        "Metacritic User Score": 7.1,
+        "Metacritic User Reviews": 216,
+        "AOTY Critic Score": 72,
+        "AOTY Critic Reviews": 21,
+        "AOTY User Score": 58,
+        "AOTY User Reviews": 2100
       },
       {
         "": 17176,
         "Artist": "Jon Bellion",
-        "Title": "< 60/100",
+        "Title": "< 70/100",
         "Release Month": "June",
         "Release Day": 10,
         "Release Year": 2016,
@@ -35,12 +55,12 @@ const upperWing = [
         "AOTY Critic Score": 50,
         "AOTY Critic Reviews": 21,
         "AOTY User Score": 65,
-        "AOTY User Reviews": 168
+        "AOTY User Reviews": 2100
       },
       {
         "": 2256,
         "Artist": "Lana Del Rey",
-        "Title": "< 70/100",
+        "Title": "< 80/100",
         "Release Month": "January",
         "Release Day": 31,
         "Release Year": 2012,
@@ -54,26 +74,7 @@ const upperWing = [
         "AOTY Critic Score": 62,
         "AOTY Critic Reviews": 21,
         "AOTY User Score": 74,
-        "AOTY User Reviews": 1337
-      },
-      {
-        "": 1123,
-        "Artist": "Fall Out Boy",
-        "Title": "< 80/100",
-        "Release Month": "February",
-        "Release Day": 6,
-        "Release Year": 2007,
-        "Format": "LP",
-        "Label": "Island",
-        "Genre": "Pop Punk",
-        "Metacritic Critic Score": 75,
-        "Metacritic Reviews": 23,
-        "Metacritic User Score": 7.1,
-        "Metacritic User Reviews": 216,
-        "AOTY Critic Score": 72,
-        "AOTY Critic Reviews": 21,
-        "AOTY User Score": 72,
-        "AOTY User Reviews": 228
+        "AOTY User Reviews": 2100
       },
       {
         "": 364,
@@ -92,7 +93,7 @@ const upperWing = [
         "AOTY Critic Score": 83,
         "AOTY Critic Reviews": 21,
         "AOTY User Score": 88,
-        "AOTY User Reviews": 2370
+        "AOTY User Reviews": 2100
       },
     {
         "": 357,
@@ -111,7 +112,7 @@ const upperWing = [
         "AOTY Critic Score": 92,
         "AOTY Critic Reviews": 21,
         "AOTY User Score": 91,
-        "AOTY User Reviews": 1409
+        "AOTY User Reviews": 2100
       },
 
 
@@ -120,4 +121,4 @@ const upperWing = [
 
 ]
 
-module.exports = upperWing;
+module.exports = lowerWing;
