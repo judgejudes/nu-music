@@ -273,7 +273,10 @@ const Wings = ({ }) => {
                     //     console.log(genre, wingColors[r])
                     // return wingColors[r]
                     // }
-                    if (genre.toLowerCase().includes("pop")) {
+                    if (genre.includes("Indie")) {
+                        return "#C29979"
+                    }
+                    else if (genre.toLowerCase().includes("pop")) {
                         return "#EFC7C2"
                     }
                     else if (genre.includes("Hip Hop")) {
