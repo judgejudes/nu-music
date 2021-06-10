@@ -15,7 +15,7 @@
 // [fullWidth]
 // In early 2021, we asked ~200 Northwestern students about their music preferences. Let's see
 // what we found...
-*all data is from a "North by Northwestern" survey on NU students' favorite music albums
+*all data is from a "North by Northwestern" survey on NU students' favorite music albums, and from the "Contemporary album ratings and reviews" dataset by Kauvin Lucas
 // [/fullWidth]
 [br /]
 
@@ -44,6 +44,11 @@
 ## ✨Upper Wing Sizes: Number of Album of the Year Critic Scores✨
 [fullWidth]
 [UpperWingSizeKey/]
+[/fullWidth]
+
+## ✨Lower Wing Sizes: Number of Album of the Year User Scores✨
+[fullWidth]
+[LowerWingSizeKey/]
 [/fullWidth]
 
 // [fullWidth]
