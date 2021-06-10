@@ -1,8 +1,8 @@
 const wingColors = {
-    "Chamber Pop": "pink",
+    "Pop": "pink",
     "Hip Hop": "blue",
     "Neo-Psychedelia": "red",
-    Electronic: "purple",
+    "Electronic": "purple",
     "Indie Rock": "green",
     Other: "#fff2b4"
 }

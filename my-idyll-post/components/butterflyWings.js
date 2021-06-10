@@ -51,10 +51,19 @@ const Wings = ({ }) => {
     // to execute d3
     useEffect(() => {
 
+        // function log(hi) {
+        //     console.log("this works")
+        //     var genre = hi['Genre']
+        //      if (genre.includes("Pop")) {
+        //                 hi
+        //                 .attr('fill', 'pink')
+        //             }
+        // }
+
         if (albums && d3Container.current) {
             const svg = d3.select(d3Container.current);
             const flower = 100
-            console.log(flower)
+            // console.log(flower)
 
             var g = svg.selectAll('g')
             .data(albums).enter().append('g')
@@ -113,7 +122,7 @@ const Wings = ({ }) => {
                     if (AOTYCriticScore >= 90 && AOTYCriticScore < 100){
                       wingType = wing6_top
                     };
-                    console.log(wingType)
+                    // console.log(wingType)
                     return(wingType);
                 })
                 // scale lower wing size according to AOTY Critic Reviews (max = 46)
@@ -141,12 +150,58 @@ const Wings = ({ }) => {
                     };
                     return(outlineColor);
                 })
+                
 
                 .attr('stroke-width', '1.8')
                 .attr('x', (d, i) => i * 220)
-                .attr("fill", (d) => wingColors[d.Genre])
+                .attr("fill", function(d) 
+                {
+                    var genre = d['Genre']
+                    // if (wingColors.some(r => genre.includes(r))) {
+                    //     console.log(genre, wingColors[r])
+                    // return wingColors[r]
+                    // }
+                    if (genre.toLowerCase().includes("pop")) {
+                        return "#EFC7C2"
+                    }
+                    else if (genre.includes("Hip Hop")) {
+                        return "#694F5D"
+                    }
+                    else if (genre.includes("Neo-Psychedelia")) {
+                        return "#68A691"
+                    }
+                    else if (genre.includes("Electronic")) {
+                        return "#EB5160"
+                    }
+                    else if (genre.includes("Rock")) {
+                        return "#4F4789"
+                    }
+                    else if (genre.includes("Soul")) {
+                        return "#FFED66"
+                    }
+                    else if (genre.includes("Country")) {
+                        return "#7D5BA6"
+                    }
+                    else if (genre.includes("Punk")) {
+                        return "#6B0F1A"
+                    }
+                    else if (genre.includes("R&B")) {
+                        return "#2A324B"
+                    }
+                    else if (genre.includes("Disco")) {
+                        return "#84E296"
+                    }
+                    else if (genre.includes("Reggae")) {
+                        return "#C0C999"
+                    }
+                    else if (genre.includes("Singer-Songwriter")) {
+                        return "#F62DAE"
+                    }
+                    return "white"
+                }
+                )
 
-                .attr("fill-opacity", '.6')
+                .attr("fill-opacity", '1')
                 //console.log("genre colors",(d)=>albums[d].Title)
             update
                 .attr('x', (_, i) => i * 220)
@@ -179,7 +234,7 @@ const Wings = ({ }) => {
                     if (AOTYUserScore >= 90 && AOTYUserScore < 100){
                         wingType = wing6_bottom;
                     };
-                    console.log(wingType)
+                    // console.log(wingType)
                     return(wingType);
             })
                 .attr('stroke', function (d) {
@@ -209,8 +264,54 @@ const Wings = ({ }) => {
                     var sizeScale = d3.scaleLinear().domain([0,4530]).range([0.7, 2]);
                     return `translate(${calculateGridPos(i)})scale(${sizeScale(AOTYUserReviews)})`;
                 })
-                .attr("fill-opacity", '.6')
-                .attr("fill", (d) => wingColors[d.Genre])
+                .attr("fill-opacity", '1')
+                // .attr("fill", (d) => wingColors[d.Genre])
+                .attr("fill", function(d) 
+                {
+                    var genre = d['Genre']
+                    // if (wingColors.some(r => genre.includes(r))) {
+                    //     console.log(genre, wingColors[r])
+                    // return wingColors[r]
+                    // }
+                    if (genre.toLowerCase().includes("pop")) {
+                        return "#EFC7C2"
+                    }
+                    else if (genre.includes("Hip Hop")) {
+                        return "#694F5D"
+                    }
+                    else if (genre.includes("Neo-Psychedelia")) {
+                        return "#68A691"
+                    }
+                    else if (genre.includes("Electronic")) {
+                        return "#EB5160"
+                    }
+                    else if (genre.includes("Rock")) {
+                        return "#4F4789"
+                    }
+                    else if (genre.includes("Soul")) {
+                        return "#FFED66"
+                    }
+                    else if (genre.includes("Country")) {
+                        return "#7D5BA6"
+                    }
+                    else if (genre.includes("Punk")) {
+                        return "#6B0F1A"
+                    }
+                    else if (genre.includes("R&B")) {
+                        return "#2A324B"
+                    }
+                    else if (genre.includes("Disco")) {
+                        return "#84E296"
+                    }
+                    else if (genre.includes("Reggae")) {
+                        return "#C0C999"
+                    }
+                    else if (genre.includes("Singer-Songwriter")) {
+                        return "#F62DAE"
+                    }
+                    return "white"
+                }
+                )
 
             // add scaled butterfly body
             update.enter()
@@ -247,9 +348,9 @@ const Wings = ({ }) => {
                 .attr('stroke', 'black')
             
                 
-            function log(sel, msg) {
-                console.log(msg, sel)
-            }
+            // function log(hi) {
+            //     console.log("this works")
+            // }
         }
     },
         // useEffect has dependency array
