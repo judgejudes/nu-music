@@ -17,8 +17,8 @@ const LowerWingKey = ({ }) => {
     // ref is "get" and "set" via .current property
     const d3Container = useRef(null);
 
-    let perRow = 5
-    const pathWidth = 150
+    let perRow = 6
+    const pathWidth = 130
     perRow = Math.floor(800/pathWidth)
 
     let calculateGridPos = (i) => {
@@ -179,7 +179,7 @@ const LowerWingKey = ({ }) => {
 
 
         <svg
-            className="upperWing"
+            className="lowerWing"
             // width={400}
             // height={200}
             ref={d3Container}

@@ -11,7 +11,12 @@
 
 .upperWing {
   width: 1412px;
-  height: 500px;
+  height: 200px;
+}
+
+.lowerWing {
+  width: 1412px;
+  height: 220px;
 }
 
 .circles {

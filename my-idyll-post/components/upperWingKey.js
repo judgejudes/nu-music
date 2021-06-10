@@ -11,8 +11,8 @@ import D3Component from 'idyll-d3-component';
 const UpperWingKey = ({ }) => {
     const d3Container = useRef(null);
 
-    let perRow = 5
-    const pathWidth = 150
+    let perRow = 6
+    const pathWidth = 130
     perRow = Math.floor(800/pathWidth)
 
     let calculateGridPos = (i) => {
