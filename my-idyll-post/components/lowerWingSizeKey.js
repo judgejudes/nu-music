@@ -69,7 +69,7 @@ const LowerWingSizeKey = ({ }) => {
 
             var title = g.append('text')
             title.attr('text-anchor', 'middle')
-                .attr('dy', '5.5em')
+                .attr('dy', '6em')
                 .attr('transform', (d, i) => `translate(${calculateGridPos(i)})`)
 
                 .style('font-size', '.95em')
@@ -177,7 +177,7 @@ const LowerWingSizeKey = ({ }) => {
 
 
         <svg
-            className="upperWing"
+            className="lowerWing"
             // width={400}
             // height={200}
             ref={d3Container}
