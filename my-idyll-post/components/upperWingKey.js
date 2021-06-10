@@ -108,7 +108,7 @@ const UpperWingKey = ({ }) => {
                     if (AOTYCriticScore >= 80 && AOTYCriticScore < 90){
                       wingType = wing5_top
                     };
-                    if (AOTYCriticScore >= 90 && AOTYCriticScore < 100){
+                    if (AOTYCriticScore >= 90 && AOTYCriticScore <= 100){
                       wingType = wing6_top
                     };
                     // console.log(wingType)

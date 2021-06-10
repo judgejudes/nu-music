@@ -119,7 +119,7 @@ const LowerWingKey = ({ }) => {
                     if (AOTYUserScore >= 80 && AOTYUserScore < 90){
                         wingType = wing5_bottom;
                     };
-                    if (AOTYUserScore >= 90 && AOTYUserScore < 100){
+                    if (AOTYUserScore >= 90 && AOTYUserScore <= 100){
                         wingType = wing6_bottom;
                     };
                     // console.log(wingType)

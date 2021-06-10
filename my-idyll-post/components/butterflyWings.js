@@ -119,7 +119,7 @@ const Wings = ({ }) => {
                     if (AOTYCriticScore >= 80 && AOTYCriticScore < 90){
                       wingType = wing5_top
                     };
-                    if (AOTYCriticScore >= 90 && AOTYCriticScore < 100){
+                    if (AOTYCriticScore >= 90 && AOTYCriticScore <= 100){
                       wingType = wing6_top
                     };
                     // console.log(wingType)
@@ -231,7 +231,7 @@ const Wings = ({ }) => {
                     if (AOTYUserScore >= 80 && AOTYUserScore < 90){
                         wingType = wing5_bottom;
                     };
-                    if (AOTYUserScore >= 90 && AOTYUserScore < 100){
+                    if (AOTYUserScore >= 90 && AOTYUserScore <= 100){
                         wingType = wing6_bottom;
                     };
                     // console.log(wingType)
