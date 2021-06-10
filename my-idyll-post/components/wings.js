@@ -5,7 +5,7 @@ import _ from 'lodash';
 
 
 
-const WingShapesKey = ({ }) => {
+const Key = ({ }) => {
     // constructor(props) {
     //     super(props);
     // }
@@ -137,4 +137,4 @@ const WingShapesKey = ({ }) => {
     )
 }
 
-export default WingShapesKey;
+export default Key;
