@@ -31,9 +31,14 @@
 [/fullWidth]
 
 [br /]
-## ✨Wings✨
+## ✨Upper Wings: Album of the Year Critic Scores✨
 [fullWidth]
-[WingShapesKey/]
+[UpperWingKey/]
+[/fullWidth]
+
+## ✨Lower Wings: Album of the Year User Scores✨
+[fullWidth]
+[LowerWingKey/]
 [/fullWidth]
 
 // [fullWidth]
@@ -50,6 +55,3 @@
 [fullWidth]
 [butterflyWings/]
 [/fullWidth]
-
-
-
